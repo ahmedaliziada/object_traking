@@ -63,7 +63,7 @@ if uploaded_file is not None:
         fram1 = st.empty()
         
     with col2:
-        st.subheader('Foreground Mask')
+        # st.subheader('Foreground Mask')
         frame2 = st.empty()
 
     frame_count = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -87,7 +87,7 @@ if uploaded_file is not None:
         progress_bar.progress(f_id / frame_count)
 
         fram1.image(convert_color(frame), caption='Processed Frame')
-        frame2.image(fg_mask, caption='Foreground Mask')
+        # frame2.image(fg_mask, caption='Foreground Mask')
         time.sleep(0.001)
 
 
